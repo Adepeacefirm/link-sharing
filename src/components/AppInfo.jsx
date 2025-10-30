@@ -5,7 +5,7 @@ import Profile from "./Profile";
 import Preview from "../pages/Preview";
 import Navbar from "./Navbar";
 
-const AppContent = () => {
+const AppInfo = () => {
   const location = useLocation();
   const hideNavbar = ["/preview"].includes(location.pathname);
   return (
@@ -20,4 +20,4 @@ const AppContent = () => {
   );
 };
 
-export default AppContent;
+export default AppInfo;
