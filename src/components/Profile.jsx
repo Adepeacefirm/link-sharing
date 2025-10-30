@@ -202,7 +202,7 @@ const Profile = () => {
           <div className="w-full border-t border-grey200 mt-15 mb-5 py-3">
             <button
               onClick={handleProfileSave}
-              className={`w-full sm:w-[15%] block mx-auto sm:mx-0 sm:ml-auto p-3 text-white rounded-md bg-purple600
+              className={`w-full sm:w-[15%] block mx-auto sm:mx-0 sm:ml-auto p-3 text-white rounded-md cursor-pointer bg-purple600
           }`}
               type="button"
             >
