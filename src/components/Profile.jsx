@@ -61,7 +61,7 @@ const Profile = () => {
                           ref={provided.innerRef}
                           {...provided.draggableProps}
                           {...provided.dragHandleProps}
-                          className={`w-full p-2 ${opt.color} text-white rounded-lg flex items-cente justify-between`}
+                          className={`w-full p-2 ${opt?.color} text-white rounded-lg flex items-cente justify-between`}
                           key={index}
                         >
                           <div className="flex items-center gap-2">

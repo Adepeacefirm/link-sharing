@@ -6,7 +6,7 @@ const AppContextProvider = ({ children }) => {
   const [addLink, setAddLink] = useState(false);
   const [links, setLinks] = useState(() => {
     const saved = localStorage.getItem("myLinks");
-    return saved ? JSON.parse(saved) : [{ platform: "Github", url: "" }];
+    return saved ? JSON.parse(saved) : [{ platform: "", url: "" }];
   });
   const [message, setMessage] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
