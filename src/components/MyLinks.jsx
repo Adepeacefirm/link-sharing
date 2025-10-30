@@ -33,7 +33,7 @@ const MyLinks = () => {
             <p className="text-sm my-2">Platform</p>
             <section className="flex flex-col justify-center">
               <button
-                className="w-full border border-grey200 p-3 flex justify-between items-center rounded-md bg-white"
+                className="w-full border border-grey200 p-3 flex justify-between items-center rounded-md bg-white cursor-pointer"
                 onClick={() => setOpenIndex(openIndex === index ? null : index)}
               >
                 <div className={`flex items-center gap-2 w-full`}>
@@ -64,9 +64,9 @@ const MyLinks = () => {
               </button>
               <div className="ml-3 my-2">
                 {openIndex === index && (
-                  <ul className="flex flex-col gap-1">
+                  <ul className="flex flex-col gap-1 ">
                     {options.map((opt) => (
-                      <div key={opt.label} className="">
+                      <div key={opt.label} className="cursor-pointer">
                         <li
                           onClick={() => handleSelect(index, opt.label)}
                           className={`flex items-center gap-3 ${
