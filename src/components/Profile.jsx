@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext } from "react";
 import { AppContext } from "../context/AppContext";
 import { DragDropContext, Draggable, Droppable } from "@hello-pangea/dnd";
 
@@ -61,7 +61,7 @@ const Profile = () => {
                           ref={provided.innerRef}
                           {...provided.draggableProps}
                           {...provided.dragHandleProps}
-                          className={`w-full p-2 ${opt?.color} text-white rounded-lg flex items-cente justify-between`}
+                          className={`w-full p-2 ${opt?.color} text-white rounded-lg flex justify-between`}
                           key={index}
                         >
                           <div className="flex items-center gap-2">

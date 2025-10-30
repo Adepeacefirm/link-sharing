@@ -59,7 +59,7 @@ const Customize = () => {
                           ref={provided.innerRef}
                           {...provided.draggableProps}
                           {...provided.dragHandleProps}
-                          className={`w-full p-2 ${opt?.color} text-white rounded-lg flex items-cente justify-between`}
+                          className={`w-full p-2 ${opt?.color} text-white rounded-lg flex justify-between`}
                           key={index}
                         >
                           <div className="flex items-center gap-2">
@@ -141,7 +141,7 @@ const Customize = () => {
                 />
               </div>
               <h2 className="font-bold text-grey900 text-xl my-5 text-center">
-                Let's get you started
+                Let&apos;s get you started
               </h2>
               <p className="text-grey500 text-center">
                 Use the “Add new link” button to get started. Once you have more

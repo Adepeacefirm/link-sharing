@@ -28,13 +28,6 @@ const AppContextProvider = ({ children }) => {
     return savedPreview ? JSON.parse(savedPreview) : null;
   });
 
-  useEffect(() => {
-    const saved = localStorage.getItem("myLinks");
-    if (saved) {
-      setLinks(JSON.parse(saved));
-    }
-  }, []);
-
   const handleAddLink = () => {
     setLinks([...links, { platform: "Github", url: "" }]);
   };
@@ -65,15 +58,15 @@ const AppContextProvider = ({ children }) => {
   };
 
   const handleProfileSave = () => {
-    localStorage.setItem("savedFName", JSON.stringify(firstName));
-    localStorage.setItem("savedLName", JSON.stringify(lastName));
-    localStorage.setItem("savedEmail", JSON.stringify(email));
-    localStorage.setItem("savedPreview", JSON.stringify(preview));
     if (!firstName || !lastName) {
       alert("Please complete the field");
       return;
     }
-    alert("Profile saved succefully");
+    localStorage.setItem("savedFName", JSON.stringify(firstName));
+    localStorage.setItem("savedLName", JSON.stringify(lastName));
+    localStorage.setItem("savedEmail", JSON.stringify(email));
+    localStorage.setItem("savedPreview", JSON.stringify(preview));
+    alert("Profile saved succesfully");
   };
 
   const options = [
@@ -214,7 +207,6 @@ const AppContextProvider = ({ children }) => {
     }
   };
 
-
   const value = {
     addLink,
     setAddLink,
@@ -242,7 +234,6 @@ const AppContextProvider = ({ children }) => {
     email,
     setEmail,
     handleProfileSave,
-    
   };
   return <AppContext.Provider value={value}>{children}</AppContext.Provider>;
 };
