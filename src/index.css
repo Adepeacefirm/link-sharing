@@ -1,0 +1,14 @@
+@import "tailwindcss";
+
+*,
+body {
+  font-family: "Instrument Sans" sans-serif;
+}
+
+@theme {
+  --color-grey100: hsl(0, 0%, 93%);
+  --color-grey200: hsl(0, 0%, 85%);
+  --color-grey500: hsl(0, 0%, 45%);
+  --color-grey900: hsl(0, 0%, 20%);
+  --color-purple600: hsl(252, 100%, 62%);
+}
