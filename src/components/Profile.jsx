@@ -65,7 +65,7 @@ const Profile = () => {
                           key={index}
                         >
                           <div className="flex items-center gap-2">
-                            <span className="text-white">{opt.icon}</span>
+                            <span className="text-white">{opt?.icon}</span>
                             <span>{link.platform}</span>
                           </div>
                           <span className="text-white">
