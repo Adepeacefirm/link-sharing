@@ -13,15 +13,15 @@ const AppContextProvider = ({ children }) => {
   const [openIndex, setOpenIndex] = useState(null);
   const [firstName, setFirstName] = useState(() => {
     const savedFName = localStorage.getItem("savedFName");
-    return savedFName ? JSON.parse(savedFName) : "";
+    return savedFName ? savedFName : "";
   });
   const [lastName, setLastName] = useState(() => {
     const savedLName = localStorage.getItem("savedLName");
-    return savedLName ? JSON.parse(savedLName) : "";
+    return savedLName ? savedLName : "";
   });
   const [email, setEmail] = useState(() => {
     const savedEMail = localStorage.getItem("savedEmail");
-    return savedEMail ? JSON.parse(savedEMail) : "";
+    return savedEMail ? savedEMail : "";
   });
   const [preview, setPreview] = useState(() => {
     const savedPreview = localStorage.getItem("savedPreview");
@@ -62,9 +62,9 @@ const AppContextProvider = ({ children }) => {
       alert("Please complete the field");
       return;
     }
-    localStorage.setItem("savedFName", JSON.stringify(firstName));
-    localStorage.setItem("savedLName", JSON.stringify(lastName));
-    localStorage.setItem("savedEmail", JSON.stringify(email));
+    localStorage.setItem("savedFName", firstName);
+    localStorage.setItem("savedLName", lastName);
+    localStorage.setItem("savedEmail", email);
     localStorage.setItem("savedPreview", JSON.stringify(preview));
     alert("Profile saved succesfully");
   };
